@@ -1,0 +1,317 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TITLE", "DarkTheme")
+local Tab = Window:NewTab("Player stuff")
+local Section = Tab:NewSection("Section Name")
+Section:NewSlider("Speed", "Yourdad", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Jump", "mom", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewSlider("HipHeight", "SliderInfo", 500, 2, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
+end)
+
+local Tab = Window:NewTab("Clicking sim")
+
+local Section = Tab:NewSection("AutoClicking")
+
+Section:NewToggle("Auto Clicking", "ToggleInfo", function(state)
+    if state then
+getgenv().AutoClick = true;
+
+while wait() do
+    if getgenv().AutoClick == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.ClickService.Click:InvokeServer();
+    end
+end
+        print("Toggle On")
+    else
+getgenv().AutoClick = false;
+        print("Toggle Off")
+    end
+end)
+
+local Section = Tab:NewSection("BuyPets")
+
+Section:NewToggle("Basic Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyBasic = true;
+
+while wait() do
+    if getgenv().BuyBasic == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Basic Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyBasic = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Rare Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyRare = true;
+
+while wait() do
+    if getgenv().BuyRare == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Rare Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyRare = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Epic Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyEpic = true;
+
+while wait() do
+    if getgenv().BuyEpic == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Epic Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyEpic = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Forest Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyForest = true;
+
+while wait() do
+    if getgenv().BuyForest == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Forest Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyForest = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Lava Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyLava = true;
+
+while wait() do
+    if getgenv().BuyLava == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Lava Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyLava = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Desert Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyDesert = true;
+
+while wait() do
+    if getgenv().BuyDesert == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Desert Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyDesert = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Moon Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyMoon = true;
+
+while wait() do
+    if getgenv().BuyMoon == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Moon Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyMoon = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Forest Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyCyber = true;
+
+while wait() do
+    if getgenv().BuyCyber == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Cyber Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyCyber = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Candy Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyCandy = true;
+
+while wait() do
+    if getgenv().BuyCandy == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Candy Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyCandy = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Russo Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyRusso = true;
+
+while wait() do
+    if getgenv().BuyRusso == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Russo Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyRusso = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Anime Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyAnime = true;
+
+while wait() do
+    if getgenv().BuyAnime == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Anime Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyAnime = false;
+        print("Toggle Off")
+    end
+end)
+
+Section:NewToggle("Toxic Egg", "ToggleInfo", function(state)
+    if state then
+getgenv().BuyToxic = true;
+
+while wait() do
+    if getgenv().BuyToxic == true then
+        game:GetService("ReplicatedStorage").RemoteFunctions.EggService.HatchEgg:InvokeServer("Toxic Egg");
+    end
+end
+        print("Toggle On")
+    else
+getgenv().BuyToxic = false;
+        print("Toggle Off")
+    end
+end)
+
+local Section = Tab:NewSection("Worlds")
+
+Section:NewButton("Spawn", "ButtonInfo", function()
+    game:GetService("ReplicatedStorage").RemoteFunctions.WorldService.TeleportToWorld:InvokeServer("Spawn");
+    print("Teleported")
+end)
+
+Section:NewButton("Forest", "ButtonInfo", function()
+local TP = CFrame.new(579, 73, 2409)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Lava Land", "ButtonInfo", function()
+    local TP = CFrame.new(334, 74, 2409)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Desert", "ButtonInfo", function()
+    local TP = CFrame.new(78, 73, 2410)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Moon", "ButtonInfo", function()
+    local TP = CFrame.new(-187, 65, 2259)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Cyber", "ButtonInfo", function()
+    local TP = CFrame.new(-472, 66, 2270)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Candy", "ButtonInfo", function()
+    local TP = CFrame.new(-791, 66, 2270)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Russo", "ButtonInfo", function()
+    local TP = CFrame.new(-1099, 66, 2270)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Anime", "ButtonInfo", function()
+    local TP = CFrame.new(-1151, 74, 2409)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
+
+Section:NewButton("Radioactive", "ButtonInfo", function()
+    local TP = CFrame.new(-1415, 74, 2408)
+local info = TweenInfo.new(1, Enum.EasingStyle.Linear)
+pcall(function()
+        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = TP}):Play()
+end)
+    print("Clicked")
+end)
