@@ -148,7 +148,7 @@ getgenv().BuyMoon = false;
     end
 end)
 
-Section:NewToggle("Forest Egg", "ToggleInfo", function(state)
+Section:NewToggle("Cyber Egg", "ToggleInfo", function(state)
     if state then
 getgenv().BuyCyber = true;
 
